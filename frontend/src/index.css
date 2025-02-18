@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap")
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Giga:wght@100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -11,6 +11,7 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
+  background-color :rgb(24 24 27);
 }
 
 .bg-slate-700 {
@@ -26,7 +27,7 @@ html, body {
   position: relative;
   z-index: 1; 
   border-radius: 80px;
-  background-color: #151417; 
+  background-color: transparent;
   font-weight: bold;
   transition: background-color 1s ease
 }
@@ -37,7 +38,7 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color:rgb(24 24 27 / var(--tw-bg-opacity)); ;
+  background-color:transparent ;
   left: 0;
   top: 0;
   border-radius: 80px;
@@ -60,6 +61,7 @@ html, body {
   transition: opacity 1s ease-in-out;
   border-radius: 80px;
   opacity: 0;
+  padding: 20px;
 }
 
 /* le keyframe défini les étapes intermédiaire dans l'animation*/
@@ -86,4 +88,122 @@ html, body {
 
 .btn:active::after {
   background: transparent;
+}
+
+
+body, html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  z-index: -2;
+}
+
+
+.fluo {
+  position: relative;
+  padding: 20px;
+  border-radius: 10px;
+   
+}
+
+/* Déclaration de la variable d'angle pour l'animation */
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+
+.fluo::before,
+.fluo::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  
+  background-image: conic-gradient(from var(--angle), transparent, transparent, green, transparent, transparent, green, transparent);
+  border-radius: 10px;
+  z-index: -1;
+  animation: spin 5s linear infinite;
+}
+
+
+.fluo::before {
+  filter: blur(1rem);
+  opacity: 1;
+}
+
+
+.fluo p {
+  z-index: 1;
+  color: white;
+  text-align: center;
+}
+
+/* Définition de l'animation de rotation */
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
+  gap: 20px; /* Espacement entre les éléments */
+  padding: 20px;
+  justify-items : center ;
+}
+
+.container {
+    position: relative;
+    width:60%;
+    height: 250px;
+    cursor: pointer;
+   border-radius: 10px;
+}
+
+/* Rectangle vert */
+.rectangle-vert {
+    width: 100%;
+    height: 100%;
+    background-color: green;
+    border-radius: 10px;
+}
+
+/* Overlay flou */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.7); /* Gris semi-transparent */
+    backdrop-filter: blur(10px); /* Effet de flou */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+    border-radius: 10px;
+}
+
+/* Texte au centre */
+.overlay p {
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Effet au survol */
+.container:hover .overlay {
+    backdrop-filter: blur(0px); /* Supprime le flou */
+    background-color: rgba(128, 128, 128, 0); /* Rend l'overlay totalement transparent */
 }
