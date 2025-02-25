@@ -5,6 +5,9 @@ import Collection from './pages/Collection'
 import Test from './pages/Detaillespages/test'
 import Mvg from './pages/Detaillespages/mvg'
 import Sbbw from './pages/Detaillespages/Sbbw'
+import Bbw from './pages/Detaillespages/Bbw'
+import Opbw from './pages/Detaillespages/Opbw'
+import Mmbw from './pages/Detaillespages/Mmbw'
 const App = () => {
   return (
     <div className=''>
@@ -14,6 +17,9 @@ const App = () => {
        <Route path ='/Detaillespages/test' element={<Test/>}/> {/** bien mettre le dossier avant sinon la route marche pas logique */}
        <Route path='Detaillespages/mvg' element={<Mvg/>}/>
        <Route path='Detaillespages/sbbw' element={<Sbbw/>}/>
+       <Route path='Detaillespages/bbw' element={<Bbw/>}/>
+       <Route path='Detaillespages/opbw' element={<Opbw/>}/>
+       <Route path ='Detaillespages/mmbw' element={<Mmbw/>}/>
       </Routes>
       
 

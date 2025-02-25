@@ -14,7 +14,9 @@ html, body {
   height: 100%;
   width: 100%;
   margin: 0;
-  background-color :rgb(24 24 27);
+  padding: 0;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+  background-color: rgb(24, 24, 27);
 }
 
 .bg-slate-700 {
@@ -167,7 +169,7 @@ body, html {
   width: 90%;
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-  gap: 20px; /* Espacement entre les éléments */
+  row-gap: 100px; /* Espacement entre les éléments */
   padding: 20px;
   justify-items : center ;
   margin: 0 auto;
@@ -224,9 +226,9 @@ body, html {
 .link-unstyled {
   text-decoration: none;
   color: inherit;
-  display: block;  /* Pour que Link occupe toute la largeur */
-  width: 100%;     /* Assure que le Link occupe toute la largeur du container */
-  height: 100%;    /* Assure que le Link occupe toute la hauteur */
+  display: block; 
+  width: 100%;     
+  height: 100%;    
 }
 
 
@@ -235,3 +237,165 @@ body, html {
   backdrop-filter: blur(0px); 
   background-color: rgba(128, 128, 128, 0); 
 }
+footer {
+  background-color: #000; 
+  color: #fff; 
+  padding: 1rem; 
+  text-align: center; 
+  bottom: 0;
+  width: 100%;
+}
+
+.text {
+  font-size: 1.5rem; 
+  color: white; 
+  text-align: center; 
+  padding: 2rem; 
+}
+
+.dud {
+  color: rgb(44, 172, 19); 
+}
+
+.detail-container {
+  width: 80%;
+  margin: 10% auto; /* Centrer et ajouter un espace en haut */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #fff; /* Ajouter un fond blanc pour la visibilité */
+}
+
+.main-image-container {
+  margin-bottom: 20px;
+}
+
+.main-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.main-image {
+  width: 100%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.text-container {
+  margin-bottom: 20px;
+}
+
+.text-wrapper {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Ajouter un fond clair pour la visibilité */
+  border-radius: 10px;
+}
+
+.images-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.images-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.image-item {
+  flex: 1;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Media queries pour les petits écrans */
+@media (max-width: 768px) {
+  .images-container {
+    grid-template-columns: 1fr;
+  }
+  .images-wrapper {
+    flex-direction: column;
+  }
+}
+/* Styles pour le composant Detail */
+.detail-container {
+  width: 80%;
+  margin: 10% auto; /* Centrer et ajouter un espace en haut */
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  background-color: #fff; /* Ajouter un fond blanc pour la visibilité */
+}
+
+.main-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.main-image {
+  width: 80%;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.text-wrapper {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Ajouter un fond clair pour la visibilité */
+  border-radius: 10px;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.images-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.image-item {
+  flex: 1;
+}
+
+.image-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+
+@media (max-width: 768px) {
+  .images-wrapper {
+    flex-direction: column;
+  }
+}
+
+.detail-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; 
+  background-color: rgb(24, 24, 27);
+}
+
