@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 import Detail from "../../components/Detail";
-import test from "../../images/test.png";
-import mvgbw from "../../images/mvgbw.png";
-import sbbw from "../../images/sbbw.png";
+import kasa1 from "../../images/kasa1.png";
+import kasa2 from "../../images/kasa2.png";
+import kasa3 from "../../images/kasa3.png";
 
 const TestDetail = () => {
   useEffect(() => {
@@ -13,9 +13,9 @@ const TestDetail = () => {
   }, []);
 
   const detailImages = [
-    { src: mvgbw, alt: "Test Image 1" },
-    { src: sbbw, alt: "Test Image 2" },
-    { src: test, alt: "Test Image 3" },
+    { src: kasa1, alt: "image de la page d'acceuil de kasa avec plusieurs encart qui montre différents logement" },
+    { src: kasa2, alt: "details d'un logement specifique qui montre l'organisation des details avec ue gallery avec des fleches des encarts pour les équipements etc.." },
+    { src: kasa3, alt: "page à propos qui répond à plusieurs question comme le respect des normes ou encore la sécurité " },
   ];
 
   const text = `Refonte complète du site web de Kasa, entreprise de location d’appartements entre particuliers, avec des technologies modernes pour améliorer la rapidité et la navigation. Utilisation de React pour créer une application web fluide et responsive, adaptée à tous les écrans.
@@ -26,9 +26,14 @@ const TestDetail = () => {
     <div>
       <Detail
         title="Refonte du site web de Kasa"
-        mainImage={test}
+        mainImage={kasa1}
         text={text}
         images={detailImages}
+        mainImageStyle={{
+          backgroundSize: 'cover', // Ajustez cette propriété selon vos besoins
+          backgroundPosition: 'top', // Ajustez cette propriété selon vos besoins
+          backgroundRepeat: 'no-repeat', // Ajustez cette propriété selon vos besoins
+        }}
       />
     </div>
   );
