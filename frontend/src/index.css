@@ -243,7 +243,9 @@ footer {
   padding: 1rem; 
   text-align: center; 
   bottom: 0;
+  left: 0;
   width: 100%;
+  
 }
 
 .text {
@@ -319,7 +321,7 @@ footer {
   border-radius: 10px;
 }
 
-/* Media queries pour les petits écrans */
+
 @media (max-width: 768px) {
   .images-container {
     grid-template-columns: 1fr;
@@ -328,17 +330,17 @@ footer {
     flex-direction: column;
   }
 }
-/* Styles pour le composant Detail */
+
 .detail-container {
   width: 80%;
-  margin: 10% auto; /* Centrer et ajouter un espace en haut */
+  margin: 10% auto; 
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 40px;
-  background-color: #fff; /* Ajouter un fond blanc pour la visibilité */
+  background-color: #fff; 
 }
 
 .main-image-wrapper {
@@ -393,7 +395,7 @@ footer {
   background-color: rgb(24, 24, 27);
 }
 
-/* Styles pour la modale */
+
 .modal-overlay {
   position: fixed;
   top: 0;
@@ -419,3 +421,19 @@ footer {
   border-radius: 10px;
 }
 
+@media (min-width: 1200px) {
+  header , main  {
+    padding-top: 50px;
+    padding-right: 200px; 
+    padding-left: 200px; 
+  }
+  .grid-container{
+    row-gap: 200px;
+  }
+.container{
+  height: 500px;
+}
+.detail-container{
+  padding: 200px;
+}
+}
