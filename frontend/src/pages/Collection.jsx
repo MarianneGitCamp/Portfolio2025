@@ -8,12 +8,14 @@ import opbw from "../images/opbw.png";
 import mmbw from "../images/mmbw.png";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
+import Navigation from "../components/Navigation";
 
 const Collection = () => {
   return (
     <>
       <div className="h-screen m-1 pt-3">
         <header>
+          <Navigation />
           <div className="grid h-[25vh] grid-cols-1 md:grid-cols-3 gap-[3rem] p-[2rem] px-12">
             {/* Colonne gauche qui prend 2/3 de la grille */}
             <div className="fluo bg-black border-red-500 p-4 block">
@@ -32,7 +34,7 @@ const Collection = () => {
             </div>
           </div>
         </header>
-        <main>
+        <main id="main">
           <div className="grid-container justify-items-center gap-8">
             <Link to="/Detaillespages/test" className="link-unstyled">
               <div className="container mx-auto">
