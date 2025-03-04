@@ -4,12 +4,14 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+* {
   font-family: Lexend Giga, sans-serif;
 }
-header{
+
+header {
   padding-bottom: 2rem;
 }
+
 html, body {
   height: 100%;
   width: 100%;
@@ -20,7 +22,7 @@ html, body {
 }
 
 .bg-slate-700 {
-  min-height: 100vh; 
+  min-height: 100vh;
 }
 
 .btn {
@@ -30,11 +32,11 @@ html, body {
   color: #FFF;
   cursor: pointer;
   position: relative;
-  z-index: 1; 
+  z-index: 1;
   border-radius: 80px;
   background-color: transparent;
   font-weight: bold;
-  transition: background-color 1s ease
+  transition: background-color 1s ease;
 }
 
 .btn::after {
@@ -43,7 +45,7 @@ html, body {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-color:transparent ;
+  background-color: transparent;
   left: 0;
   top: 0;
   border-radius: 80px;
@@ -52,7 +54,7 @@ html, body {
 .btn::before {
   content: "";
   background: linear-gradient(
-    45deg, #1aeb32,#1aeb32,#1aeb32,#25c42d,#25c42d,#25c42d,#25c42d
+    45deg, #1aeb32, #1aeb32, #1aeb32, #25c42d, #25c42d, #25c42d, #25c42d
   );
   position: absolute;
   top: -2px;
@@ -72,7 +74,7 @@ html, body {
 /* le keyframe défini les étapes intermédiaire dans l'animation*/
 /* permet une animation douce "infini"*/
 @keyframes glowing {
- 0% { background-position: 0 0; }
+  0% { background-position: 0 0; }
   100% { background-position: 100% 100%; }
 }
 
@@ -80,10 +82,8 @@ html, body {
   opacity: 1;
 }
 
-
 .btn:active {
   background-color: transparent;
- 
   border: none;
 }
 
@@ -95,23 +95,19 @@ html, body {
   background: transparent;
 }
 
-
 body, html {
   height: 100%;
   margin: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  
   z-index: -2;
 }
-
 
 .fluo {
   position: relative;
   padding: 20px;
   border-radius: 10px;
-   
 }
 
 /* Déclaration de la variable d'angle pour l'animation */
@@ -121,7 +117,6 @@ body, html {
   inherits: false;
 }
 
-
 .fluo::before,
 .fluo::after {
   content: "";
@@ -130,19 +125,16 @@ body, html {
   left: 0;
   right: 0;
   bottom: 0;
-  
   background-image: conic-gradient(from var(--angle), transparent, transparent, green, transparent, transparent, green, transparent);
   border-radius: 10px;
   z-index: -1;
   animation: spin 5s linear infinite;
 }
 
-
 .fluo::before {
   filter: blur(1rem);
   opacity: 1;
 }
-
 
 .fluo p {
   z-index: 1;
@@ -159,9 +151,10 @@ body, html {
     --angle: 360deg;
   }
 }
+
 .jsp {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   padding: 1rem;
 }
 
@@ -171,92 +164,88 @@ body, html {
   grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
   row-gap: 100px; /* Espacement entre les éléments */
   padding: 20px;
-  justify-items : center ;
+  justify-items: center;
   margin: 0 auto;
 }
 
 .container {
-    position: relative;
-    width:80%;
-    height: 300px;
-    cursor: pointer;
-   border-radius: 10px;
+  position: relative;
+  width: 40vw;
+  aspect-ratio: 16/9;
+  cursor: pointer;
+  border-radius: 10px;
 }
-
 
 /* Rectangle vert */
 .rectangle-vert {
-    width: 100%;
-    height: 100%;
-    background-color: green;
-    border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  background-color: green;
+  border-radius: 10px;
 }
 
 /* Overlay flou */
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(128, 128, 128, 0.7); /* Gris semi-transparent */
-    backdrop-filter: blur(3px); /* Effet de flou */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
-    border-radius: 10px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(128, 128, 128, 0.7); /* Gris semi-transparent */
+  backdrop-filter: blur(3px); /* Effet de flou */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: backdrop-filter 0.3s ease, background-color 0.3s ease;
+  border-radius: 10px;
 }
 
 /* Texte au centre */
 .overlay p {
-    color: white;
-    font-size: 20px;
-    font-weight: bold;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 /* Effet au survol */
 .container:hover .overlay {
-    backdrop-filter: blur(0px); /* Supprime le flou */
-    background-color: rgba(128, 128, 128, 0); /* Rend l'overlay totalement transparent */
+  backdrop-filter: blur(0px); /* Supprime le flou */
+  background-color: rgba(128, 128, 128, 0); /* Rend l'overlay totalement transparent */
 }
-
-
 
 .link-unstyled {
   text-decoration: none;
   color: inherit;
-  display: block; 
-  width: 100%;     
-  height: 100%;    
+  display: block;
+  width: 100%;
+  height: 100%;
 }
-
-
 
 .container:hover .overlay {
-  backdrop-filter: blur(0px); 
-  background-color: rgba(128, 128, 128, 0); 
+  backdrop-filter: blur(0px);
+  background-color: rgba(128, 128, 128, 0);
 }
+
 footer {
-  background-color: #000; 
-  color: #fff; 
-  padding: 1rem; 
-  text-align: center; 
+  background-color: #000;
+  color: #fff;
+  padding: 1rem;
+  text-align: center;
   bottom: 0;
   left: 0;
   width: 100%;
-  
+  margin-top: 3rem;
 }
 
 .text {
-  font-size: 1.5rem; 
-  color: white; 
-  text-align: center; 
-  padding: 2rem; 
+  font-size: 1.5rem;
+  color: white;
+  text-align: center;
+  padding: 2rem;
 }
 
 .dud {
-  color: rgb(44, 172, 19); 
+  color: rgb(44, 172, 19);
 }
 
 .detail-container {
@@ -321,67 +310,6 @@ footer {
   border-radius: 10px;
 }
 
-
-@media (max-width: 768px) {
-  .images-container {
-    grid-template-columns: 1fr;
-  }
-  .images-wrapper {
-    flex-direction: column;
-  }
-}
-
-.detail-container {
-  width: 80%;
-  margin: 10% auto; 
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  background-color: #fff; 
-}
-
-.main-image-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.main-image {
-  width: 80%;
-  height: 300px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 10px;
-}
-
-.text-wrapper {
-  text-align: center;
-  padding: 20px;
-  background-color: #f9f9f9; /* Ajouter un fond clair pour la visibilité */
-  border-radius: 10px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.images-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.image-item {
-  flex: 1;
-}
-
-
-@media (max-width: 768px) {
-  .images-wrapper {
-    flex-direction: column;
-  }
-}
-
 .detail-page {
   display: flex;
   flex-direction: column;
@@ -391,10 +319,9 @@ footer {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; 
+  overflow-x: hidden;
   background-color: rgb(24, 24, 27);
 }
-
 
 .modal-overlay {
   position: fixed;
@@ -421,23 +348,6 @@ footer {
   border-radius: 10px;
 }
 
-@media (min-width: 1200px) {
-  header , main  {
-    padding-top: 50px;
-    padding-right: 200px; 
-    padding-left: 200px; 
-  }
-  .grid-container{
-    row-gap: 200px;
-  }
-.container{
-  height: 500px;
-}
-.detail-container{
-  padding: 200px;
-}
-}
-
 /* Styles pour la navigation */
 .navigation {
   display: flex;
@@ -446,8 +356,6 @@ footer {
   padding: 20px;
   padding-top: 0;
   margin-bottom: 50px;
-
-
 }
 
 .navigation-list {
@@ -458,6 +366,7 @@ footer {
   width: 100%;
   margin: 0;
   padding: 0;
+  
 }
 
 .navigation-item {
@@ -480,8 +389,7 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
- 
+  
 }
 
 .gif-container {
@@ -490,7 +398,6 @@ footer {
 
 .gif-image {
   width: 100%;
-
   object-fit: cover;
 }
 
@@ -498,19 +405,22 @@ footer {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white;
+  text-align: center; /* Centrer le titre */
 }
 
 .text-blocks {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center; /* Centrer les blocs de texte */
   margin-bottom: 20px;
+  color: white; /* Mettre le texte en blanc */
 }
 
 .text-block {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
+  padding: 10px; /* Ajouter de l'espace autour des blocs de texte */
 }
 
 .bullet-point {
@@ -528,8 +438,108 @@ footer {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: white;
+  text-align: center; /* Centrer le titre de la section Spotify */
 }
 
 .spotify-container {
   margin-top: 20px;
+}
+h1.page-title-moi{
+  color: white;
+  margin-bottom: 20px;
+  font-size: 1.5vw;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: rgba(51, 51, 51, 0.4); /* Fond moins opaque */
+  border-radius: 8px;
+  color: white;
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-container label {
+  font-size: 1rem;
+}
+
+.form-container input,
+.form-container textarea {
+  padding: 0.5rem;
+  border-radius: 4px;
+  border: none;
+  width: 100%;
+  background-color: rgb(133, 127, 127); /* Fond gris clair et moins opaque pour les champs de saisie */
+  color: black; /* Couleur du texte à l'intérieur des champs de saisie */
+  z-index : 1 ;
+}
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: rgba(0, 0, 0, 0.6); /* Couleur du texte de l'espace réservé (placeholder) plus foncé */
+}
+
+.form-container input[type="file"] {
+  border-radius: 4px; /* Arrondir les angles du bouton d'envoi de fichier */
+  background-color: rgba(211, 211, 211, 0.8); /* Fond gris clair et moins opaque pour le bouton d'envoi de fichier */
+  padding: 0.5rem; /* Ajouter du padding pour le bouton d'envoi de fichier */
+}
+
+.form-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #1aeb32;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.form-container button:hover {
+  background-color: #25c42d;
+}
+.form-title {
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .images-container {
+    grid-template-columns: 1fr;
+  }
+  .images-wrapper {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 1400px) {
+  header, main {
+    padding-top: 50px;
+    padding-right: 200px;
+    padding-left: 200px;
+  }
+  .grid-container {
+    row-gap: 200px;
+  }
+  .container {
+    height: 500px;
+  }
+  .detail-container {
+    padding: 200px;
+  }
+  .form-container {
+    width: 60%;
+  }
+  .grid-container {
+   margin: 1px;
+   gap : 100px;
+
+  }
 }

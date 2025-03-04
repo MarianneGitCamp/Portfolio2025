@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../index.css";
 import test from "../images/test.png";
 import mvgbw from "../images/mvgbw.png";
@@ -9,23 +9,34 @@ import mmbw from "../images/mmbw.png";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
+import emailjs from "emailjs-com";
 
 const Collection = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_fv8j93q', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_USER_ID')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+  };
+
   return (
     <>
       <div className="h-screen m-1 pt-3">
         <header>
           <Navigation />
           <div className="grid h-[25vh] grid-cols-1 md:grid-cols-3 gap-[3rem] p-[2rem] px-12">
-            {/* Colonne gauche qui prend 2/3 de la grille */}
             <div className="fluo bg-black border-red-500 p-4 block">
               <p className="text-white break-words">tout à gauche wokistan</p>
             </div>
             <div className="fluo bg-black border-red-500 p-4 block">
               <p className="text-white break-words">macron</p>
             </div>
-
-            {/* Colonne droite qui prend 1/3 de la grille */}
             <div className="fluo bg-black border-red-500 p-4 block">
               <p className="text-white break-words">
                 Colonne droite je suis jigsaw holalal hypnose et je fais du
@@ -44,8 +55,7 @@ const Collection = () => {
                     backgroundImage: `url(${test})`,
                     backgroundSize: "cover",
                   }}
-                ></div>{" "}
-                {/** la j'appel l'image por remplacer e rectangle vert de base et j'utilise la fonctionnalité cover pour pas que l'image se répéte ( elle est trop petite debase ) il faut faire ça pou tout les projet mtn  */}
+                ></div>
                 <div className="overlay">
                   <p>Test 1</p>
                 </div>
@@ -125,6 +135,22 @@ const Collection = () => {
               </div>
             </Link>
           </div>
+          <h2 className="form-title">Contact :  </h2> {/* Nouveau titre */}
+          <form ref={form} onSubmit={sendEmail} className="form-container">
+            <label htmlFor="name">Nom ou Prénom</label>
+            <input type="text" id="name" name="user_name" required />
+
+            <label htmlFor="email">Votre mail</label>
+            <input type="email" id="email" name="user_email" required />
+
+            <label htmlFor="description">Description du projet</label>
+            <textarea id="description" name="project_description" placeholder="Refonte, création de site, optimisation, maintenance, amélioration du référencement (SEO), corrections, mises à jour, ajout de fonctionnalités, design, performances, accessibilité, migration… Besoin d’un service spécifique ?" required></textarea>
+
+            <label htmlFor="inspiration">Fichiers d'inspiration (optionnel)</label>
+            <input type="file" id="inspiration" name="inspiration_files" multiple accept="image/*" />
+
+            <button type="submit">Envoyer</button>
+          </form>
         </main>
         <Footer />
       </div>

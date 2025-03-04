@@ -4,11 +4,12 @@ import gifImage from "../images/MoiGlitch.gif";
 
 const Moi = () => {
   return (
-    <div>
-      <header>
+    <div className= "h-screen">
+      <header id="navigation-header">
         <Navigation />
       </header>
       <main className="moi-container">
+        <h1 className="page-title-moi">Mavca (Marianne) </h1> 
         <div className="gif-container">
           <img src={gifImage} alt="GIF" className="gif-image" />
         </div>
@@ -16,15 +17,15 @@ const Moi = () => {
         <div className="text-blocks">
           <div className="text-block">
             <span className="bullet-point">•</span>
-            <p>Texte 1</p>
+            <p> J'aime l'informatique, la culture alternative et la nature. </p>
           </div>
           <div className="text-block">
             <span className="bullet-point">•</span>
-            <p>Texte 2</p>
+            <p> Encore étudiante, je poursuis un Bac+4 orienté informatique en septembre 2025. </p>
           </div>
           <div className="text-block">
             <span className="bullet-point">•</span>
-            <p>Texte 3</p>
+            <p>Je réalise les sites gratuitement afin de me constituer un premier book de projets, puis les tarifs augmenteront progressivement. j'en profite pour remettre mon mail pour tout projet : <a href="mailto:Mavcaweb@gmail.com">Mavcaweb@gmail.com</a> </p>
           </div>
         </div>
         <h2 className="spotify-title">Musique que j'aime :</h2>
