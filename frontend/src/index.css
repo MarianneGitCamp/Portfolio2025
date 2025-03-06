@@ -9,7 +9,7 @@
 }
 
 header {
-  padding-bottom: 2rem;
+  padding-bottom: 28rem;
 }
 
 html, body {
@@ -17,7 +17,7 @@ html, body {
   width: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Empêche le défilement horizontal */
+  overflow-x: hidden;
   background-color: rgb(24, 24, 27);
 }
 
@@ -71,8 +71,7 @@ html, body {
   padding: 20px;
 }
 
-/* le keyframe défini les étapes intermédiaire dans l'animation*/
-/* permet une animation douce "infini"*/
+
 @keyframes glowing {
   0% { background-position: 0 0; }
   100% { background-position: 100% 100%; }
@@ -110,7 +109,7 @@ body, html {
   border-radius: 10px;
 }
 
-/* Déclaration de la variable d'angle pour l'animation */
+
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -136,13 +135,9 @@ body, html {
   opacity: 1;
 }
 
-.fluo p {
-  z-index: 1;
-  color: white;
-  text-align: center;
-}
 
-/* Définition de l'animation de rotation */
+
+
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -161,8 +156,7 @@ body, html {
 .grid-container {
   width: 90%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* 2 colonnes */
-  row-gap: 100px; /* Espacement entre les éléments */
+  grid-template-columns: repeat(2, 1fr); 
   padding: 20px;
   justify-items: center;
   margin: 0 auto;
@@ -176,7 +170,7 @@ body, html {
   border-radius: 10px;
 }
 
-/* Rectangle vert */
+
 .rectangle-vert {
   width: 100%;
   height: 100%;
@@ -184,15 +178,15 @@ body, html {
   border-radius: 10px;
 }
 
-/* Overlay flou */
+
 .overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(128, 128, 128, 0.7); /* Gris semi-transparent */
-  backdrop-filter: blur(3px); /* Effet de flou */
+  background-color: rgba(128, 128, 128, 0.7); 
+  backdrop-filter: blur(3px); 
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,17 +194,17 @@ body, html {
   border-radius: 10px;
 }
 
-/* Texte au centre */
+
 .overlay p {
   color: white;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* Effet au survol */
+
 .container:hover .overlay {
-  backdrop-filter: blur(0px); /* Supprime le flou */
-  background-color: rgba(128, 128, 128, 0); /* Rend l'overlay totalement transparent */
+  backdrop-filter: blur(0px); 
+  background-color: rgba(128, 128, 128, 0); 
 }
 
 .link-unstyled {
@@ -227,7 +221,7 @@ body, html {
 }
 
 footer {
-  background-color: #000;
+  background-color: rgb(51, 51, 51 ,0.4);
   color: #fff;
   padding: 1rem;
   text-align: center;
@@ -250,14 +244,14 @@ footer {
 
 .detail-container {
   width: 80%;
-  margin: 10% auto; /* Centrer et ajouter un espace en haut */
+  margin: 10% auto; 
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  background-color: #fff; /* Ajouter un fond blanc pour la visibilité */
+  background-color: #fff; 
 }
 
 .main-image-container {
@@ -284,7 +278,7 @@ footer {
 .text-wrapper {
   text-align: center;
   padding: 20px;
-  background-color: #f9f9f9; /* Ajouter un fond clair pour la visibilité */
+  background-color: #f9f9f9; 
   border-radius: 10px;
 }
 
@@ -329,7 +323,7 @@ footer {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.8); /* Fond noir opaque à 80% */
+  background-color: rgba(0, 0, 0, 0.8); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -348,7 +342,6 @@ footer {
   border-radius: 10px;
 }
 
-/* Styles pour la navigation */
 .navigation {
   display: flex;
   justify-content: top;
@@ -381,10 +374,10 @@ footer {
 }
 
 .navigation-link:hover {
-  color: #1aeb32; /* Couleur de survol */
+  color: #1aeb32; 
 }
 
-/* Styles pour la page Moi */
+
 .moi-container {
   display: flex;
   flex-direction: column;
@@ -405,22 +398,22 @@ footer {
   font-size: 2rem;
   margin-bottom: 20px;
   color: white;
-  text-align: center; /* Centrer le titre */
+  text-align: center; 
 }
 
 .text-blocks {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Centrer les blocs de texte */
+  align-items: center; 
   margin-bottom: 20px;
-  color: white; /* Mettre le texte en blanc */
+  color: white; 
 }
 
 .text-block {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-  padding: 10px; /* Ajouter de l'espace autour des blocs de texte */
+  padding: 10px; 
 }
 
 .bullet-point {
@@ -438,7 +431,7 @@ footer {
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: white;
-  text-align: center; /* Centrer le titre de la section Spotify */
+  text-align: center; 
 }
 
 .spotify-container {
@@ -455,9 +448,9 @@ h1.page-title-moi{
   flex-direction: column;
   gap: 1rem;
   margin-top: 2rem;
-  padding: 1rem;
-  background-color: rgba(51, 51, 51, 0.4); /* Fond moins opaque */
-  border-radius: 8px;
+  padding: 3rem;
+  background-color: rgba(51, 51, 51, 0.4); 
+  border-radius: px;
   color: white;
   width: 70%;
   margin: 0 auto;
@@ -473,30 +466,32 @@ h1.page-title-moi{
   border-radius: 4px;
   border: none;
   width: 100%;
-  background-color: rgb(133, 127, 127); /* Fond gris clair et moins opaque pour les champs de saisie */
-  color: black; /* Couleur du texte à l'intérieur des champs de saisie */
+  background-color: rgb(133, 127, 127); 
+  color: black; 
   z-index : 1 ;
 }
 
 .form-container input::placeholder,
 .form-container textarea::placeholder {
-  color: rgba(0, 0, 0, 0.6); /* Couleur du texte de l'espace réservé (placeholder) plus foncé */
+  color: rgba(0, 0, 0, 0.6);
 }
 
 .form-container input[type="file"] {
-  border-radius: 4px; /* Arrondir les angles du bouton d'envoi de fichier */
-  background-color: rgba(211, 211, 211, 0.8); /* Fond gris clair et moins opaque pour le bouton d'envoi de fichier */
-  padding: 0.5rem; /* Ajouter du padding pour le bouton d'envoi de fichier */
+  border-radius: 4px;
+  padding: 0.5rem; 
 }
 
 .form-container button {
-  padding: 0.5rem 1rem;
+  padding: 1rem 1rem;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   background-color: #1aeb32;
   color: white;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  width: 30%;
+  margin: 0 auto;
+  margin-top: 1rem;
 }
 
 .form-container button:hover {
@@ -506,10 +501,37 @@ h1.page-title-moi{
   font-size: 2rem;
   color: white;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
-/* Media Queries */
+.nav-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.logo {
+height: 55px;
+margin-bottom: 100px;
+}
+
+
+.hover-zoom {
+  cursor: pointer; 
+  overflow: hidden; 
+}
+
+.hover-zoom-image {
+  transition: transform 0.3s ease; 
+}
+
+.hover-zoom:hover .hover-zoom-image {
+  transform: scale(1.1); 
+}
+
+
 @media (max-width: 768px) {
   .images-container {
     grid-template-columns: 1fr;

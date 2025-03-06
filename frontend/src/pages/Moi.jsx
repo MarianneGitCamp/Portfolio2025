@@ -1,12 +1,17 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import gifImage from "../images/MoiGlitch.gif"; 
-
+import { Link } from "react-router-dom";
 const Moi = () => {
   return (
     <div className= "h-screen">
       <header id="navigation-header">
         <Navigation />
+        <div className="nav-logo">
+          <Link to="/Collection">
+            <img src="/icone.png" alt="Logo" className="logo" />
+          </Link>
+        </div>
       </header>
       <main className="moi-container">
         <h1 className="page-title-moi">Mavca (Marianne) </h1> 

@@ -33,8 +33,8 @@ const Detail = ({ title, mainImage, text, images, mainImageStyle }) => {
       </div>
       <div className="images-wrapper">
         {images.map((image, index) => (
-          <div key={index} className="image-item" onClick={() => openModal(image.src)}>
-            <img src={image.src} alt={image.alt} />
+          <div key={index} className="image-item hover-zoom" onClick={() => openModal(image.src)}>
+            <img src={image.src} alt={image.alt} className="hover-zoom-image" />
           </div>
         ))}
       </div>
