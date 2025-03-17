@@ -1,6 +1,7 @@
 import React from "react";
 import Navigation from "../components/Navigation";
 import gifImage from "../images/MoiGlitch.gif"; 
+import icone from "../images/icone.png";
 import { Link } from "react-router-dom";
 const Moi = () => {
   return (
@@ -9,7 +10,7 @@ const Moi = () => {
         <Navigation />
         <div className="nav-logo">
           <Link to="/Collection">
-            <img src="/icone.png" alt="Logo" className="logo" />
+            <img src={icone} alt="Logo" className="logo" />
           </Link>
         </div>
       </header>

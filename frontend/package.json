@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://MarianneGitCamp.github.io/Portfolio2025",
+  "homepage": "https://MarianneGitCamp.github.io/Portfolio2025/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

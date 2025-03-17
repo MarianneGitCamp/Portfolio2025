@@ -6,6 +6,7 @@ import sbbw from "../images/sbbw.png";
 import bbw from "../images/bbw.png";
 import opbw from "../images/opbw.png";
 import mmbw from "../images/mmbw.png";
+import icone from "../images/icone.png";
 import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navigation from "../components/Navigation";
@@ -32,7 +33,7 @@ const Collection = () => {
           <Navigation />
           <div className="nav-logo">
             <Link to="/Collection">
-              <img src="/icone.png" alt="Logo" className="logo" />
+            <img src={icone} alt="Logo" className="logo" />
             </Link>
           </div>
           <div className="grid h-[25vh] grid-cols-1 md:grid-cols-3 gap-[3rem] p-[2rem] px-12">
