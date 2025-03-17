@@ -8,8 +8,27 @@
   font-family: Lexend Giga, sans-serif;
 }
 
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+main {
+  padding: 0 1rem; /* Ajoute un padding pour éviter que le contenu touche les bords de l'écran */
+}
+
+
+h2.TG
+{
+  padding-top:10rem ;
+}
 header {
-  padding-bottom: 28rem;
+  padding-bottom: 12rem;
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding-top: 50px;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 html, body {
@@ -71,7 +90,6 @@ html, body {
   padding: 20px;
 }
 
-
 @keyframes glowing {
   0% { background-position: 0 0; }
   100% { background-position: 100% 100%; }
@@ -109,7 +127,6 @@ body, html {
   border-radius: 10px;
 }
 
-
 @property --angle {
   syntax: "<angle>";
   initial-value: 0deg;
@@ -135,9 +152,6 @@ body, html {
   opacity: 1;
 }
 
-
-
-
 @keyframes spin {
   from {
     --angle: 0deg;
@@ -154,7 +168,7 @@ body, html {
 }
 
 .grid-container {
-  width: 90%;
+
   display: grid;
   grid-template-columns: repeat(2, 1fr); 
   padding: 20px;
@@ -168,8 +182,9 @@ body, html {
   aspect-ratio: 16/9;
   cursor: pointer;
   border-radius: 10px;
+  max-width: 100%;
+  overflow-x: hidden;
 }
-
 
 .rectangle-vert {
   width: 100%;
@@ -177,7 +192,6 @@ body, html {
   background-color: green;
   border-radius: 10px;
 }
-
 
 .overlay {
   position: absolute;
@@ -194,13 +208,11 @@ body, html {
   border-radius: 10px;
 }
 
-
 .overlay p {
   color: white;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
 }
-
 
 .container:hover .overlay {
   backdrop-filter: blur(0px); 
@@ -359,7 +371,6 @@ footer {
   width: 100%;
   margin: 0;
   padding: 0;
-  
 }
 
 .navigation-item {
@@ -377,12 +388,10 @@ footer {
   color: #1aeb32; 
 }
 
-
 .moi-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .gif-container {
@@ -437,7 +446,8 @@ footer {
 .spotify-container {
   margin-top: 20px;
 }
-h1.page-title-moi{
+
+h1.page-title-moi {
   color: white;
   margin-bottom: 20px;
   font-size: 1.5vw;
@@ -454,6 +464,7 @@ h1.page-title-moi{
   color: white;
   width: 70%;
   margin: 0 auto;
+  border-radius: 10px;
 }
 
 .form-container label {
@@ -462,13 +473,13 @@ h1.page-title-moi{
 
 .form-container input,
 .form-container textarea {
-  padding: 0.5rem;
-  border-radius: 4px;
+  padding: 1.5rem;
+  border-radius: 8px;
   border: none;
   width: 100%;
-  background-color: rgb(133, 127, 127); 
+ 
   color: black; 
-  z-index : 1 ;
+  z-index: 1;
 }
 
 .form-container input::placeholder,
@@ -497,6 +508,7 @@ h1.page-title-moi{
 .form-container button:hover {
   background-color: #25c42d;
 }
+
 .form-title {
   font-size: 2rem;
   color: white;
@@ -513,10 +525,9 @@ h1.page-title-moi{
 }
 
 .logo {
-height: 55px;
-margin-bottom: 100px;
+  height: 55px;
+  margin-bottom: 100px;
 }
-
 
 .hover-zoom {
   cursor: pointer; 
@@ -531,13 +542,88 @@ margin-bottom: 100px;
   transform: scale(1.1); 
 }
 
-
 @media (max-width: 768px) {
   .images-container {
     grid-template-columns: 1fr;
   }
   .images-wrapper {
     flex-direction: column;
+  }
+  .px-12{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .text-xl{
+    font-size: 1rem;
+  }
+  .text-xs{
+    font-size: 0.60rem;
+  }
+
+  .navigation-list {
+    flex-direction: column;
+    align-items: center;
+    gap : 70px;
+  }
+  .form-container button {
+    width: 60%;
+  }
+
+}
+
+@media (max-width: 1600px) {
+  .grid-cols-1 {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 1600px) {
+  h2.TG
+  {
+   
+   padding-top: 900px;
+  }
+
+  .grid-container {
+    margin: 1px;
+    width: 100%;
+  }
+  h2.TE {
+    padding-bottom: 1rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  h2.TG
+  {
+   
+   padding-top: 450px;
+  }
+
+  .grid-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); 
+    padding: 20px;
+    justify-items: center;
+    margin: 0 auto;
+  }
+
+  .container {
+    position: relative;
+    width: 80vw;
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    border-radius: 10px;
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+}
+@media (max-width: 767px) {
+  h2.TG
+  {
+   
+   padding-top: 420px;
   }
 }
 
@@ -560,8 +646,7 @@ margin-bottom: 100px;
     width: 60%;
   }
   .grid-container {
-   margin: 1px;
-   gap : 100px;
-
+    margin: 1px;
+    gap: 100px;
   }
 }

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const Moi = () => {
   return (
     <div className= "h-screen">
-      <header id="navigation-header">
+      <header className = "pb-1 pt-16 pr-10 pl-10" id="navigation-header">
         <Navigation />
         <div className="nav-logo">
           <Link to="/Collection">
@@ -13,12 +13,12 @@ const Moi = () => {
           </Link>
         </div>
       </header>
-      <main className="moi-container">
-        <h1 className="page-title-moi">Mavca (Marianne) </h1> 
-        <div className="gif-container">
+      <main className="moi-container p-5">
+        <h1 className="page-title-moi pb-10">Mavca (Marianne) </h1> 
+        <div className="gif-container pb-10">
           <img src={gifImage} alt="GIF" className="gif-image" />
         </div>
-        <h1 className="title">À propos de moi</h1>
+        <h1 className="title pb-10">À propos de moi</h1>
         <div className="text-blocks">
           <div className="text-block">
             <span className="bullet-point">•</span>
@@ -30,10 +30,19 @@ const Moi = () => {
           </div>
           <div className="text-block">
             <span className="bullet-point">•</span>
-            <p>Je réalise les sites gratuitement afin de me constituer un premier book de projets, puis les tarifs augmenteront progressivement. j'en profite pour remettre mon mail pour tout projet : <a href="mailto:Mavcaweb@gmail.com">Mavcaweb@gmail.com</a> </p>
+            <p>
+              Je suis en recherche d'une <span style={{ color: '#1aeb32' }}>alternance</span> dans le cadre de ma formation conceptrice réalisatrice d'application pour 2025.
+            </p>
+           
+          </div>
+          <div className="text-block">
+            <span className="bullet-point">•</span>
+            <p>
+              Je réalise les sites gratuitement afin de me constituer un premier book de projets, puis les tarifs augmenteront progressivement. Mon mail pour tout projet : <a href="mailto:Mavcaweb@gmail.com" style={{ color: '#1aeb32' }}>Mavcaweb@gmail.com</a>.
+            </p>
           </div>
         </div>
-        <h2 className="spotify-title">Musique que j'aime :</h2>
+        <h2 className="spotify-title pb-10 pt-10">Musique que j'aime :</h2>
         <div className="spotify-container">
           <iframe
             style={{ borderRadius: "12px" }}
@@ -43,7 +52,7 @@ const Moi = () => {
             frameBorder="0"
             allowFullScreen=""
             allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-            loading="lazy"
+            loading="eager"
             title="Spotify"
           ></iframe>
         </div>

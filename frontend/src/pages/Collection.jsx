@@ -37,8 +37,8 @@ const Collection = () => {
           </div>
           <div className="grid h-[25vh] grid-cols-1 md:grid-cols-3 gap-[3rem] p-[2rem] px-12">
             <div className="fluo bg-[rgb(24,24,30)] border-red-500 p-4 block">
-              <h2 className="text-center text-white pb-6">Services</h2>
-              <p className="text-white break-words text-xs text-left leading-8">
+              <h2 className="TE text-center text-xl text-white pb-20">Services</h2>
+              <p className="text-white break-words text-xs md:text-xs lg:text-sm text-left leading-sm md:leading-5 lg:leading-8    ">
                 <strong>FRONT END:</strong><br />
                 Création d’interfaces réactives. (Ex : Site e-commerce adapté à mobile et desktop.)<br />
                 <strong>BACK END:</strong><br />
@@ -50,25 +50,35 @@ const Collection = () => {
               </p>
             </div>
             <div className="fluo bg-[rgb(24,24,30)] border-red-500 p-4 block">
-              <h2 className="text-center text-white pb-32">Contact</h2>
-              <p className="text-white break-words text-xs text-left leading-10">
+              <h2 className=" TE text-center text-xl text-white pb-20">Contact</h2>
+              <p className=" text-white break-words text-xs md:text-sm lg:text-base text-left leading-sm md:leading-5 lg:leading-10 ">
                 <strong>MAIL :</strong><br/>
-                Mavcaweb@gmail.com<br />
+                <a href="mailto:Mavcaweb@gmail.com">Mavcaweb@gmail.com</a><br />
                 <strong>GITHUB:</strong><br />
-                <a href="https://github.com/MarianneGitCamp" target="_blank" rel="noopener noreferrer">https://github.com/MarianneGitCamp</a>
+                <a href="https://github.com/MarianneGitCamp" target="_blank" rel="noopener noreferrer">https://github.com/MarianneGitCamp</a><br/>
+                <strong>ROOTME:</strong><br/>
+              Vacherchereau
               </p>
+              
             </div>
             <div className="fluo bg-[rgb(24,24,30)] border-red-500 p-4 block">
-              <h2 className="text-center text-white pb-6">Compétences Techniques</h2>
-              <p className="text-white break-words text-xs text-left leading-10 ">
-                JavaScript, React, React Router, HTML, CSS, Sass, Java SE, Jersey, Node.js, Express.js, PHP, Symfony, MongoDB, Mongoose, MySQL, Architecture MVC, API RESTful, VSCode, GitHub, GitLab, Figma, Lighthouse, Google Snippet, WAVE, Squoosh.
+              <h2 className="text-center text-xl text-white pb-6">Compétences Techniques</h2>
+              <p className="text-white break-words text-xs md:text-sm lg:text-base text-left leading-sm md:leading-5 lg:leading-10  ">
+              <strong>FRONT END:</strong><br />
+                JavaScript, React, React Router, HTML, CSS, Sass<br />
+                <strong>BACK END:</strong><br />
+                Java SE, Jersey, Node.js, Express.js, PHP, Symfony, MongoDB, Mongoose, MySQL<br />
+                <strong>ARCHITECTURE:</strong><br />
+                Architecture MVC, API RESTful<br />
+                <strong>OUTILS:</strong><br />
+                VSCode, GitHub, GitLab, Figma, Lighthouse, Google Snippet, WAVE, Squoosh
               </p>
             </div>
           </div>
         </header>
     
-        <main id="main">*
-              <h2 className="text-center text-white mt-8 text-2xl pb-20 pt-5">Projets : </h2>
+        <main id="main">
+              <h2 className="TG text-center text-white mt-8 text-2xl pb-20 pt-20">Projets : </h2>
           <div className="grid-container justify-items-center gap-[7rem]">
             <Link to="/Detaillespages/test" className="link-unstyled">
               <div className="container mx-auto">
@@ -80,7 +90,7 @@ const Collection = () => {
                   }}
                 ></div>
                 <div className="overlay">
-                  <p>Test 1</p>
+                  <p>Kasa</p>
                 </div>
               </div>
             </Link>
@@ -95,8 +105,7 @@ const Collection = () => {
                 ></div>
                 <div className="overlay">
                   <p>
-                    Test 2 pb d'affichage dans les pages après ouvertures à
-                    reprendre{" "}
+                    Mon vieux grimoire
                   </p>
                 </div>
               </div>
@@ -111,7 +120,7 @@ const Collection = () => {
                   }}
                 ></div>
                 <div className="overlay">
-                  <p>Test 3</p>
+                  <p >Portfolio SB</p>
                 </div>
               </div>
             </Link>
@@ -125,7 +134,7 @@ const Collection = () => {
                   }}
                 ></div>
                 <div className="overlay">
-                  <p>Test 4</p>
+                  <p>Booki</p>
                 </div>
               </div>
             </Link>
@@ -139,7 +148,7 @@ const Collection = () => {
                   }}
                 ></div>
                 <div className="overlay">
-                  <p>Test 5</p>
+                  <p>Optimisation</p>
                 </div>
               </div>
             </Link>
@@ -153,12 +162,12 @@ const Collection = () => {
                   }}
                 ></div>
                 <div className="overlay">
-                  <p>Test 6</p>
+                  <p>Menu Maker</p>
                 </div>
               </div>
             </Link>
           </div>
-          <h2 className="form-title pb-10 pt-5">Contact :  </h2> 
+          <h2 className="form-title text-2xl pb-10 pt-5">Contact :  </h2> 
           <form ref={form} onSubmit={sendEmail} className="form-container">
             <label htmlFor="name">Nom/Prénom</label>
             <input type="text" id="name" name="user_name" required />
